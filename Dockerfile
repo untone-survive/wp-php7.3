@@ -37,7 +37,7 @@ RUN { \
 # RUN rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 # USER www-data;
 
-RUN pecl install xdebug \
+RUN pecl install xdebug-3.1.6 \
     && docker-php-ext-enable xdebug \
     && echo "error_reporting = E_ALL" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
     && echo "display_startup_errors = On" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
